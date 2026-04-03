@@ -30,10 +30,14 @@
   }
 
   .pink-gradient {
-
+    @apply bg-linear-to-tl from-salmon to-pink;
   }
 
   .button {
 
+  }
+
+  .navlink {
+    @apply font-medium h-full aspect-square transition-all duration-100 rounded-md p-2 hover:bg-gunmetal/20;
   }
 }
