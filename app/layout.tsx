@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Mulish } from "next/font/google";
+import { Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 
-const mulish = Mulish({
-  variable: "--font-mulish",
+const schibsted_grotesk = Schibsted_Grotesk({
+  variable: "--font-grotesk",
   subsets: ["latin"],
 });
 
@@ -20,10 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${mulish.variable} antialiased`}
-      >
-        <Navbar/>
+      <body className={`${schibsted_grotesk.variable} antialiased`}>
+        <Navbar />
         {children}
       </body>
     </html>

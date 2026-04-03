@@ -1,17 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  color: #d6d6d6;
+  color: #294e56;
 }
 
 @theme {
-  --font-mulish: var(--font-mulish);
-
-  --color-salmon: #F58F7C;
-  --color-pink: #F2C4CE;
-  --color-gray: #D6D6D6;
-  --color-pewter: #4F4F51;
-  --color-gunmetal: #2C2B30;
+  --font-grotesk: var(--font-grotesk);
+  --color-midnight: #13162a;
+  --color-lilac: #8086ae;
+  --color-lavender: #8cffda;
 }
 
 @layer base {
@@ -21,23 +18,10 @@
 }
 
 @layer components {
-  .dark-gradient {
-    @apply bg-linear-to-tl from-gunmetal to-pewter;
-  }
-
-  .gray-gradient {
-
-  }
-
-  .pink-gradient {
-    @apply bg-linear-to-tl from-salmon to-pink;
-  }
-
   .button {
-
   }
 
   .navlink {
-    @apply font-medium h-full aspect-square transition-all duration-100 rounded-md p-2 hover:bg-gunmetal/20;
+    @apply font-medium h-full aspect-square transition-all duration-100 rounded-md p-2 hover:bg-black/20 relative;
   }
 }
