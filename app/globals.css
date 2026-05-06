@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  color: #294e56;
+  color: #ffffff;
 }
 
 @theme {
   --font-grotesk: var(--font-grotesk);
-  --color-midnight: #13162a;
-  --color-lilac: #8086ae;
-  --color-lavender: #8cffda;
+  --color-midnight: #141414;
+  --color-black: #0d0d0d;
+  --color-accent: #ff9ccc;
+  --color-secondary: #a66ade;
 }
 
 @layer base {
@@ -18,10 +19,23 @@
 }
 
 @layer components {
+  .gradient {
+    @apply bg-linear-150 from-accent to-secondary;
+  }
+
   .button {
+    @apply py-2 px-4 rounded-md flex w-fit transition-all duration-150;
+  }
+
+  .hollow {
+    @apply border border-accent bg-transparent hover:bg-accent;
   }
 
   .navlink {
-    @apply font-medium h-full aspect-square transition-all duration-100 rounded-md p-2 hover:bg-black/20 relative;
+    @apply font-normal h-full w-fit transition-all duration-100 rounded-md py-2 px-4 hover:bg-black/20 relative;
+  }
+
+  .text-gradient {
+    @apply bg-linear-150 from-accent to-secondary bg-clip-text text-transparent inline-block;
   }
 }

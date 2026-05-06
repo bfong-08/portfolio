@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${schibsted_grotesk.variable} antialiased`}>
+      <body className={`${schibsted_grotesk.variable} bg-midnight antialiased`}>
         <Navbar />
         {children}
       </body>
