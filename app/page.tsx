@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Carousel, CarouselItem } from "./components/carousel";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Home() {
@@ -57,7 +56,7 @@ export default function Home() {
         </div>
       </header>
       <div className="w-full pt-12 pb-18 gap-8 bg-black text-white flex flex-col items-center justify-center">
-        <h1 className="">FEATURED PROJECTS</h1>
+        <h1 className="">Featured Projects</h1>
         <div className="flex gap-8">
           <ProjectLink
             href="https://github.com/bfong-08/quantum-simulator"
@@ -74,11 +73,6 @@ export default function Home() {
             description="A simple interface to evolve a qubit state using quantum gates"
           />
         </div>
-      </div>
-      <div className="w-full text-white flex flex-col items-center justify-center">
-        <Carousel>
-          <CarouselItem />
-        </Carousel>
       </div>
     </div>
   );
@@ -100,8 +94,8 @@ const ProjectLink = ({
   return (
     <Link
       href={href}
-      className="h-96 w-xs  overflow-hidden flex item-center justify-center 
-        relative group hover:scale-[101%] transition-all duration-200"
+      className="h-96 w-xs rounded-md  overflow-hidden flex item-center justify-center 
+        relative group hover:scale-[101%] transition-all duration-150"
       target="_blank">
       <Image
         src={img_src}
@@ -109,7 +103,7 @@ const ProjectLink = ({
         width={1000}
         height={1000}
         className="w-full object-cover group-hover:scale-110 group-hover:brightness-75
-          transition-all duration-200"
+          transition-all duration-150"
       />
       <div
         className="flex flex-col gap-1 justify-end absolute bottom-0 left-0 w-full h-full p-4 z-10 
