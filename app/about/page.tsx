@@ -1,4 +1,5 @@
 import Image from "next/image";
+import React from "react";
 
 export default function About() {
   const courses = [
@@ -63,9 +64,30 @@ export default function About() {
           </p>
         </div>
       </header>
-      <div className="bg-black flex flex-col items-center py-8 gap-8">
+      <div className="w-full flex flex-col md:flex-row gap-8 px-24 my-8 items-stretch">
+        <TimelineCard title="Education">
+          <TimelineCardItem
+            title="St. Joseph Notre Dame High School"
+            years="2022-2026"
+            description="Private Catholic High School in Alameda, CA."
+          />
+          <TimelineCardItem
+            title="University of California, Los Angeles"
+            years="2026-Present"
+            description="Public Four-Year University. Majoring in Physics."
+          />
+        </TimelineCard>
+        <TimelineCard title="Work Experience">
+          <TimelineCardItem
+            title="Mathnasium Math Instructor"
+            years="2025-Present"
+            description="Tutored students of grades K-12 in various math subjects."
+          />
+        </TimelineCard>
+      </div>
+      <div className="bg-black flex flex-col items-center p-8 gap-8 mx-24 rounded-xl border border-grey">
         <h1>Relevant Coursework</h1>
-        <div className="flex flex-nowrap gap-4 px-8 overflow-x-scroll no-scrollbar max-w-full">
+        <div className="flex flex-nowrap gap-4 overflow-x-scroll no-scrollbar max-w-full">
           {courses.map((course) => (
             <CourseCard
               key={course.title}
@@ -77,10 +99,46 @@ export default function About() {
           ))}
         </div>
       </div>
-      <div className="bg-black">
-        <h1>Skills</h1>
+      <div className="bg-black flex items-center justify-center">
+        <h1 className="">Skills</h1>
       </div>
     </>
+  );
+}
+
+function TimelineCard({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div
+      className="flex-1 bg-black gap-8 rounded-xl border 
+    border-grey flex items-center justify-start flex-col px-16 
+    py-8">
+      <h1>{title}</h1>
+      <ul className="flex flex-col gap-4 w-full">{children}</ul>
+    </div>
+  );
+}
+
+function TimelineCardItem({
+  title,
+  years,
+  description,
+}: {
+  title: string;
+  years: string;
+  description?: string;
+}) {
+  return (
+    <li className="flex flex-col w-full rounded-md p-4 bg-midnight border border-grey hover:border-accent transition-all duration-150">
+      <h2 className="text-lg font-bold">{title}</h2>
+      <h3 className="text-accent">{years}</h3>
+      <p>{description}</p>
+    </li>
   );
 }
 
