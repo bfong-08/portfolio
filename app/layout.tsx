@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 const schibsted_grotesk = Schibsted_Grotesk({
   variable: "--font-grotesk",
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${schibsted_grotesk.variable} bg-midnight antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

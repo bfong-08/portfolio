@@ -95,7 +95,7 @@ const ProjectLink = ({
     <Link
       href={href}
       className="h-96 w-xs rounded-md  overflow-hidden flex item-center justify-center 
-        relative group hover:scale-[101%] transition-all duration-150"
+        relative group border border-grey hover:scale-[101%] transition-all duration-150"
       target="_blank">
       <Image
         src={img_src}

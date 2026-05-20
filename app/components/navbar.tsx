@@ -18,7 +18,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="w-full fixed top-4 px-24 z-40">
+    <nav className="w-full fixed top-4 px-24 z-40 font-grotesk">
       <div
         className={`transition-all duration-150 
          h-16 rounded-md flex gap-2 items-center p-2 z-40 text-lg border 

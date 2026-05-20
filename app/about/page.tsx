@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { BsPlusLg } from "react-icons/bs";
 
 export default function About() {
   const courses = [
@@ -37,7 +38,7 @@ export default function About() {
 
   return (
     <>
-      <header className="w-full h-screen flex px-32 gap-16 justify-center">
+      <header className="w-full md:h-screen py-24 md:py-0 flex md:flex-row flex-col md:px-32 px-16 gap-16 justify-center items-center">
         <div className="flex items-center justify-center">
           <div className="overflow-hidden border border-grey w-72 rounded-md ">
             <Image
@@ -49,9 +50,11 @@ export default function About() {
             />
           </div>
         </div>
-        <div className=" w-md flex flex-col justify-center text-white gap-4">
-          <h1 className="text-gradient text-6xl h-20">About Me</h1>
-          <p>
+        <div className="w-md flex flex-col justify-center text-white gap-4">
+          <h1 className="text-gradient text-6xl h-20 md:text-left text-center">
+            About Me
+          </h1>
+          <p className="md:text-left text-center">
             Hey! My name is <BW>Brandon Fong,</BW> and I am an incoming college
             freshman from the Bay Area. During high school, I taught myself{" "}
             <BW>Java, Python, </BW> and <BW>JavaScript</BW> through online
@@ -99,8 +102,87 @@ export default function About() {
           ))}
         </div>
       </div>
-      <div className="bg-black flex items-center justify-center">
+      <div className="bg-black flex flex-col gap-8 items-center justify-center mx-24 my-8 rounded-xl border border-grey p-8">
         <h1 className="">Skills</h1>
+        <div className="flex flex-col md:flex-row gap-4 flex-nowrap overflow-x-scroll no-scrollbar max-w-full">
+          <SkillCard
+            title="Python"
+            description="Programming deep learning models with PyTorch and simulating quantum circuits with Qiskit.">
+            <Image
+              className="h-1/2 w-auto aspect-square"
+              src={"/logos/pytorch.png"}
+              alt="pytorch logo"
+              width={100}
+              height={100}
+            />
+            <BsPlusLg className="h-8 w-auto aspect-square" />
+            <Image
+              className="h-3/4 w-auto aspect-square"
+              src={"/logos/python.png"}
+              alt="python logo"
+              width={100}
+              height={100}
+            />
+            <BsPlusLg className="h-8 w-auto aspect-square" />
+            <Image
+              className="invert h-1/2 w-auto aspect-square"
+              src={"/logos/qiskit.png"}
+              alt="qiskit logo"
+              width={100}
+              height={100}
+            />
+          </SkillCard>
+          <SkillCard
+            title="TypeScript"
+            description="Frontend and backend web development using Next.js App Router">
+            <Image
+              className="h-2/3 w-auto aspect-square"
+              src={"/logos/typescript.png"}
+              alt="typescript logo"
+              width={100}
+              height={100}
+            />
+            <BsPlusLg className="h-8 w-auto aspect-square" />
+            <Image
+              className="h-2/3 w-auto aspect-square"
+              src={"/logos/nextjs.png"}
+              alt="next.js logo"
+              width={100}
+              height={100}
+            />
+          </SkillCard>
+          <SkillCard title="Java" description="">
+            <Image
+              className="h-full w-auto aspect-auto"
+              src={"/logos/java.png"}
+              alt="java logo"
+              width={100}
+              height={100}
+            />
+          </SkillCard>
+          <SkillCard
+            title="Graphic Design"
+            description="Designing components for the web and physical media">
+            <Image
+              className="h-full w-auto aspect-auto"
+              src={"/logos/figma.png"}
+              alt="figma logo"
+              width={100}
+              height={100}
+            />
+          </SkillCard>
+          <SkillCard
+            title="Laser Cutting"
+            description="Designing cutouts and laser cutting plywood using a Dremel Digilab">
+            <Image
+              className="h-1/2 w-auto aspect-auto"
+              src={"/logos/dremel-digilab.png"}
+              alt="dremel logo"
+              width={100}
+              height={100}
+            />
+          </SkillCard>
+        </div>
       </div>
     </>
   );
@@ -169,4 +251,24 @@ function CourseCard({
 
 function BW({ children }: { children: React.ReactNode }) {
   return <span className="font-bold">{children}</span>;
+}
+
+function SkillCard({
+  title,
+  children,
+  description,
+}: {
+  title: string;
+  children: React.ReactNode;
+  description: string;
+}) {
+  return (
+    <div className="flex flex-col shrink-0 w-2xs gap-2 hover:border-accent transition-all duration-150 p-4 bg-midnight items-center rounded-md border border-grey">
+      <div className="flex items-center justify-center gap-2 h-28 p-2 w-full">
+        {children}
+      </div>
+      <h2 className="text-xl font-bold">{title}</h2>
+      <p className="text-center md:block hidden">{description}</p>
+    </div>
+  );
 }
