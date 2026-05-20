@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import ProjectLink from "./components/project-link";
 
 export default function Home() {
   return (
@@ -60,57 +61,22 @@ export default function Home() {
         <div className="flex gap-8">
           <ProjectLink
             href="https://github.com/bfong-08/quantum-simulator"
-            img_src="/quantum-simulator-visual.jpeg"
+            img_src="/projects/quantum-simulator-visual.jpeg"
             img_alt="quantum simulator visual"
             title="Quantum State Simulator"
-            description="A lightweight simulator created using Python and NumPy"
+            description="A lightweight multi-qubit simulator capable of state evolution through quantum gates."
+            logos={["python"]}
           />
           <ProjectLink
             href="https://bfong-qubit-visualizer.vercel.app"
-            img_src="/qubit-visualizer-visual.png"
+            img_src="/projects/qubit-visualizer-visual.png"
             img_alt="qubit visualizer visual"
             title="Qubit Visualizer"
-            description="A simple interface to evolve a qubit state using quantum gates"
+            description="An interface to display the properties of a single qubit state as it evolves through various quantum gates."
+            logos={["python", "typescript", "nextjs"]}
           />
         </div>
       </div>
     </div>
   );
 }
-
-const ProjectLink = ({
-  href,
-  img_src,
-  img_alt,
-  title,
-  description,
-}: {
-  href: string;
-  img_src: string;
-  img_alt: string;
-  title: string;
-  description: string;
-}) => {
-  return (
-    <Link
-      href={href}
-      className="h-96 w-xs rounded-md  overflow-hidden flex item-center justify-center 
-        relative group border border-grey hover:scale-[101%] transition-all duration-150"
-      target="_blank">
-      <Image
-        src={img_src}
-        alt={img_alt}
-        width={1000}
-        height={1000}
-        className="w-full object-cover group-hover:scale-110 group-hover:brightness-75
-          transition-all duration-150"
-      />
-      <div
-        className="flex flex-col gap-1 justify-end absolute bottom-0 left-0 w-full h-full p-4 z-10 
-          text-white bg-linear-to-t from-black to-black/">
-        <h2 className="font-bold text-xl">{title}</h2>
-        <p className="text-sm">{description}</p>
-      </div>
-    </Link>
-  );
-};

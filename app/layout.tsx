@@ -3,6 +3,7 @@ import { Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const schibsted_grotesk = Schibsted_Grotesk({
   variable: "--font-grotesk",
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
