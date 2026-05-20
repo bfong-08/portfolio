@@ -37,7 +37,10 @@ export default function Navbar() {
             About Me
           </Navlink>
           <Navlink href={"/projects"} pathname={pathname}>
-            My Projects
+            Projects
+          </Navlink>
+          <Navlink href={"/methodology"} pathname={pathname}>
+            Methodology
           </Navlink>
         </div>
       </div>
