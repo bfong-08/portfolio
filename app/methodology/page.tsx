@@ -65,7 +65,7 @@ export default function Methodology() {
 
   return (
     <>
-      <header className="h-screen flex flex-col gap-y-4 items-center justify-center">
+      <header className="h-screen flex mt-4 flex-col gap-y-4 items-center justify-center">
         <h1 className="h-12">
           My <span className="text-gradient h-12">Engineering</span> Process
         </h1>

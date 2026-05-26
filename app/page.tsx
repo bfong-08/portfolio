@@ -6,7 +6,7 @@ import ProjectLink from "./components/project-link";
 export default function Home() {
   return (
     <div className="font-grotesk bg-midnight text-white">
-      <header className="flex items-center justify-center h-screen relative px-8 md:px-48">
+      <header className="flex items-center justify-center pt-4 h-screen relative px-8 md:px-48">
         <div className="flex flex-col gap-8 pt-8 flex-4 z-10 w-3/4 md:w-1/2 h-full justify-center ">
           <div className="flex flex-col gap-4">
             <h1 className="text-6xl text-center md:text-left">

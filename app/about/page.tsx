@@ -38,7 +38,7 @@ export default function About() {
 
   return (
     <>
-      <header className="w-full md:h-screen py-24 md:py-0 flex md:flex-row flex-col md:px-32 px-16 gap-16 justify-center items-center">
+      <header className="w-full md:h-screen md:py-0 mt-4 flex md:flex-row flex-col md:px-32 px-16 gap-16 justify-center items-center">
         <div className="flex items-center justify-center">
           <div className="overflow-hidden border border-grey w-72 rounded-md ">
             <Image
