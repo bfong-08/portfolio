@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
+import { Suspense } from "react";
 
 export default function Methodology() {
   const searchParams = useSearchParams();
@@ -64,7 +65,7 @@ export default function Methodology() {
   };
 
   return (
-    <>
+    <Suspense>
       <header className="h-screen flex mt-4 flex-col gap-y-4 items-center justify-center">
         <h1 className="h-12">
           My <span className="text-gradient h-12">Engineering</span> Process
@@ -221,7 +222,7 @@ export default function Methodology() {
           </div>
         </div>
       </section>
-    </>
+    </Suspense>
   );
 }
 
