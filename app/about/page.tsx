@@ -151,7 +151,9 @@ export default function About() {
               height={100}
             />
           </SkillCard>
-          <SkillCard title="Java" description="">
+          <SkillCard
+            title="Java"
+            description="Object-oriented programming for AP Computer Science A">
             <Image
               className="h-full w-auto aspect-auto"
               src={"/logos/java.png"}

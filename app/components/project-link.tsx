@@ -20,14 +20,14 @@ export default function ProjectLink({
     <Link
       href={href}
       className="h-64 w-md rounded-md  overflow-hidden flex item-center justify-center 
-        relative group border border-grey hover:scale-[101%] transition-all duration-150"
+        relative group border border-grey hover:border-accent transition-all duration-150"
       target="_blank">
       <Image
         src={img_src}
         alt={img_alt}
         width={1000}
         height={1000}
-        className="w-full object-cover group-hover:scale-110 group-hover:brightness-75
+        className="w-full object-cover group-hover:scale-[102%] group-hover:brightness-75
           transition-all duration-150"
       />
       <div className="flex absolute top-0 right-0 p-4 h-20 gap-4">
