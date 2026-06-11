@@ -62,8 +62,9 @@ export default function About() {
             <BW>Next.js</BW> and <BW>PyTorch</BW>, respectively. However, I have
             since found a passion for <BW>quantum computing,</BW> and I have
             taught myself fundamental concepts through IBM Quantum Learning. I
-            plan to attend <BW>UCLA</BW> as a <BW>physics</BW> major in the
-            fall, and I hope to earn a PhD in <BW>quantum physics!</BW>
+            plan to attend <BW>Princeton University</BW> as a <BW>physics</BW>{" "}
+            major in the fall, and I hope to earn a PhD in{" "}
+            <BW>quantum physics!</BW>
           </p>
         </div>
       </header>
@@ -75,9 +76,9 @@ export default function About() {
             description="Private Catholic High School in Alameda, CA."
           />
           <TimelineCardItem
-            title="University of California, Los Angeles"
+            title="Princeton University"
             years="2026-Present"
-            description="Public Four-Year University. Majoring in Physics."
+            description="Private Four-Year University. Majoring in Physics."
           />
         </TimelineCard>
         <TimelineCard title="Work Experience">

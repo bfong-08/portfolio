@@ -18,7 +18,7 @@ export default function Home() {
             <p className="text-sm text-gray leading-6 text-center md:text-left">
               I am a senior at St. Joseph Notre Dame High School who has a
               passion for mathematics and quantum physics. I am committed to
-              studying Physics at UCLA for the Class of 2030!
+              studying Physics at Princeton University for the Class of 2030!
             </p>
           </div>
           <div className="flex gap-4 justify-center md:justify-start">
